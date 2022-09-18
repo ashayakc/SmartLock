@@ -1,0 +1,107 @@
+2022-09-18T15:44:25.0131235+05:30  [INF] Now listening on: "http://localhost:5012" (d826f4b8)
+2022-09-18T15:44:25.0312070+05:30  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-09-18T15:44:25.0324920+05:30  [INF] Hosting environment: "Development" (c3307c92)
+2022-09-18T15:44:25.0336453+05:30  [INF] Content root path: "D:\Learning\Clay\SmartLock\Source\SmartLock.API\" (b5d60022)
+2022-09-18T15:44:31.7777945+05:30 0HMKPBQ86B2DD:00000002 [INF] Trying to open door for 2 (3b8093a6)
+2022-09-18T15:44:32.8077721+05:30 0HMKPBQ86B2DD:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-18T15:44:33.8424972+05:30 0HMKPBQ86B2DD:00000002 [INF] Executed DbCommand ("74"ms) [Parameters=["@__id_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Name], [t].[OfficeId], [t].[Type], [d0].[Id], [d0].[DoorId], [d0].[RoleId]
+FROM (
+    SELECT TOP(2) [d].[Id], [d].[Name], [d].[OfficeId], [d].[Type]
+    FROM [Doors] AS [d]
+    WHERE [d].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [DoorRoleMappings] AS [d0] ON [t].[Id] = [d0].[DoorId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-18T15:44:33.9661840+05:30 0HMKPBQ86B2DD:00000002 [INF] Executed DbCommand ("4"ms) [Parameters=["@__id_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-18T15:44:34.0141823+05:30 0HMKPBQ86B2DD:00000002 [WRN] Attempt for an unauthorized entry by user 2 on door 2 (5a9744ee)
+2022-09-18T15:44:34.2049900+05:30 0HMKPBQ86B2DD:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int64), @p4='?' (Size = 1) (DbType = Byte), @p5='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Comments], [DoorId], [EventTime], [OfficeId], [Status], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [AuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-09-18T15:51:12.3239890+05:30  [INF] Now listening on: "http://localhost:5012" (d826f4b8)
+2022-09-18T15:51:12.3386242+05:30  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-09-18T15:51:12.3398837+05:30  [INF] Hosting environment: "Development" (c3307c92)
+2022-09-18T15:51:12.3411711+05:30  [INF] Content root path: "D:\Learning\Clay\SmartLock\Source\SmartLock.API\" (b5d60022)
+2022-09-18T15:51:19.3768354+05:30 0HMKPBU1EOBOE:00000002 [INF] Trying to open door for 2 (3b8093a6)
+2022-09-18T15:51:20.6370800+05:30 0HMKPBU1EOBOE:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-18T15:51:21.9320701+05:30 0HMKPBU1EOBOE:00000002 [INF] Executed DbCommand ("75"ms) [Parameters=["@__id_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Name], [t].[OfficeId], [t].[Type], [d0].[Id], [d0].[DoorId], [d0].[RoleId]
+FROM (
+    SELECT TOP(2) [d].[Id], [d].[Name], [d].[OfficeId], [d].[Type]
+    FROM [Doors] AS [d]
+    WHERE [d].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [DoorRoleMappings] AS [d0] ON [t].[Id] = [d0].[DoorId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-18T15:51:22.0610368+05:30 0HMKPBU1EOBOE:00000002 [INF] Executed DbCommand ("5"ms) [Parameters=["@__id_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-18T15:51:22.0969216+05:30 0HMKPBU1EOBOE:00000002 [WRN] Attempt for an unauthorized entry by user 2 on door 2 (5a9744ee)
+2022-09-18T15:51:22.2799933+05:30 0HMKPBU1EOBOE:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int64), @p4='?' (Size = 1) (DbType = Byte), @p5='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Comments], [DoorId], [EventTime], [OfficeId], [Status], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [AuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-09-18T15:51:27.0881460+05:30 0HMKPBU1EOBOE:00000003 [INF] Trying to open door for 1 (6db6f812)
+2022-09-18T15:51:27.1244472+05:30 0HMKPBU1EOBOE:00000003 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-18T15:51:27.1303291+05:30 0HMKPBU1EOBOE:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Name], [t].[OfficeId], [t].[Type], [d0].[Id], [d0].[DoorId], [d0].[RoleId]
+FROM (
+    SELECT TOP(2) [d].[Id], [d].[Name], [d].[OfficeId], [d].[Type]
+    FROM [Doors] AS [d]
+    WHERE [d].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [DoorRoleMappings] AS [d0] ON [t].[Id] = [d0].[DoorId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-18T15:51:27.1338811+05:30 0HMKPBU1EOBOE:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-18T15:51:27.1398528+05:30 0HMKPBU1EOBOE:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int64), @p4='?' (Size = 1) (DbType = Byte), @p5='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Comments], [DoorId], [EventTime], [OfficeId], [Status], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [AuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-09-18T15:51:29.7277804+05:30 0HMKPBU1EOBOE:00000004 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-18T15:51:29.7410762+05:30 0HMKPBU1EOBOE:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[Comments], [a].[DoorId], [a].[EventTime], [a].[OfficeId], [a].[Status], [a].[UserId]
+FROM [AuditLogs] AS [a]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2022-09-18T15:51:34.6132315+05:30 0HMKPBU1EOBOE:00000005 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-18T15:51:34.6182922+05:30 0HMKPBU1EOBOE:00000005 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-18T15:51:34.6475215+05:30 0HMKPBU1EOBOE:00000005 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
