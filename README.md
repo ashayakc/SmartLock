@@ -45,3 +45,30 @@ Let's look at how this service can be extended to different level:
 2. We can also separate out the User & Role into different micro service which may not be needed as highly available and rest of the services can be made highly available in a different microservice which the current code would let you separate easily. Also we can make users & roles sync with Door service as eventual consistency via message broker.
 3. We can hook up event sourcing pattern along with CQRS which would let us handle events and perform chain of operations.
 4. Comparitively CUD operations would be lesser compared to reads hence, CQRS lets you separate out the readable & writable DB's by making use of queries & commands.
+
+### NOTE:
+In the MVP solution, i have seeded the Office/Door/User/Roles information from backend. In future we will be needing them for sure. Listing the possible API's needed here:
+
+UserController
+  - [HttpPost] api/users
+  - [HttpPut] api/users
+  - [HttpDelete] api/users
+  - [HttpGet] api/users/{userId}
+  - [HttpGet] api/users
+RoleController
+  - [HttpPost] api/roles
+  - [HttpPut] api/roles
+  - [HttpDelete] api/roles
+  - [HttpGet] api/roles/{roleId}
+  - [HttpGet] api/offices/{officeId}/roles - To list all roles in UI when adding door
+  - [HttpGet] api/roles/{roleId}/users/{userId} - To list all users belongs to this role
+ OfficeController
+  - [HttpPost] api/offices
+  - [HttpPut] api/offices
+  - [HttpDelete] api/offices  
+ DoorController
+  - [HttpPost] api/doors
+  - [HttpPut] api/doors
+  - [HttpDelete] api/doors
+  - [HttpGet] api/offices/{officeId}/doors - To list all doors within an office
+  - [HttpGet] api/users/{userId}/doors - In UI users should see all doors they have access to
