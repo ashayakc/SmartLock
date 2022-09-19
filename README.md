@@ -49,24 +49,24 @@ Let's look at how this service can be extended to different level:
 ### NOTE:
 In the MVP solution, i have seeded the Office/Door/User/Roles information from backend. In future we will be needing them for sure. Listing the possible API's needed here:
 
-UserController
+##### UserController
   - [HttpPost] api/users
   - [HttpPut] api/users
   - [HttpDelete] api/users
   - [HttpGet] api/users/{userId}
   - [HttpGet] api/users
-RoleController
+##### RoleController
   - [HttpPost] api/roles
   - [HttpPut] api/roles
   - [HttpDelete] api/roles
   - [HttpGet] api/roles/{roleId}
   - [HttpGet] api/offices/{officeId}/roles - To list all roles in UI when adding door
   - [HttpGet] api/roles/{roleId}/users/{userId} - To list all users belongs to this role
- OfficeController
+ ##### OfficeController
   - [HttpPost] api/offices
   - [HttpPut] api/offices
   - [HttpDelete] api/offices  
- DoorController
+ ##### DoorController
   - [HttpPost] api/doors
   - [HttpPut] api/doors
   - [HttpDelete] api/doors
