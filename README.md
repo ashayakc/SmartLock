@@ -23,7 +23,7 @@ Talks about the API's SmartLock service has to offer and internally does authent
 Mainly holds the business validation, logic involved.
 
 #### Command/Query Layer:
-Service has CQRS pattern where all CUD operations are treated as commands & reads are treated as Queries. On successful execution of commands, would raise some events which further can be handled by any interested parties within like either sending mails/notifications, audit.. etc.
+Service has CQRS pattern where all CUD operations are treated as commands & reads are treated as Queries. On successful execution of commands, would raise some events which further can be handled by any interested parties within like either sending mails/notifications, audit.. etc. CQRS helps you scale, provides performance boost & security.
 
 #### Repository Layer:
 Abstraction & separation of concern for DB related activities. Adds adds advantages like if we decide to switch to different DB in future, you don't need to touch upon entire codebase, simply replace/modify repository layer.
@@ -35,3 +35,13 @@ Few key acitivites which takes place within servie:
 
 ## Table Mapping:
 ![image](https://user-images.githubusercontent.com/21059833/190972293-9c625672-695f-4acd-8280-67f96d779781.png)
+
+## Testing:
+Unit tests are written using xUnit
+
+## What next?
+Let's look at how this service can be extended to different level:
+1. Auth Server: We can abstract out the token generation part to different service or provider like Identity server/Auth0 or something similar. 
+2. We can also separate out the User & Role into different micro service which may not be needed as highly available and rest of the services can be made highly available in a different microservice which the current code would let you separate easily. Also we can make users & roles sync with Door service as eventual consistency via message broker.
+3. We can hook up event sourcing pattern along with CQRS which would let us handle events and perform chain of operations.
+4. Comparitively CUD operations would be lesser compared to reads hence, CQRS lets you separate out the readable & writable DB's by making use of queries & commands.
