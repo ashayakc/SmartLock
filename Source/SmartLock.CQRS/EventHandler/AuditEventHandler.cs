@@ -3,6 +3,7 @@ using SmartLock.CQRS.Event;
 
 namespace SmartLock.CQRS.EventHandler
 {
+    //Here i made use of the ICommandHandler itself to chain the events. Ideally we can have IEventHandler and handle it separately in future.
     public class AuditEventHandler : 
         ICommandHandler<DoorOpenedSuccessEvent>,
         ICommandHandler<DoorOpenedFailedEvent>

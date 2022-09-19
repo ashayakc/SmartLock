@@ -20,6 +20,9 @@ namespace SmartLock.DataLogic.Users
 
         public async Task<AuthenticateResponse> AuthenticateAsync(UserCredentialDto userCredential)
         {
+            if(userCredential == null || string.IsNullOrWhiteSpace(userCredential.UserName) || string.IsNullOrWhiteSpace(userCredential.Password))
+                throw new ArgumentNullException(nameof(userCredential));
+
             var encodedPassword = Convert.ToBase64String(Encoding.UTF8.GetBytes(userCredential.Password));
             var user = await _userRepository.GetByUserNameAsync(userCredential.UserName);
 
