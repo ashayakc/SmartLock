@@ -13,12 +13,12 @@ namespace SmartLock.CQRS.CommandHandler
         private readonly IDoorRepository _doorRepository;
         private readonly IUserRepository _userRepository;
         private readonly ILogger<OpenDoorCommandHandler> _logger;
-        public OpenDoorCommandHandler(ICommandDispatcher commandDispatcher, IDoorRepository doorRepository, IUserRepository userRepository, ILogger<OpenDoorCommandHandler> logger)
+        public OpenDoorCommandHandler(ICommandDispatcher commandDispatcher, IDoorRepository doorRepository, IUserRepository userRepository, ILoggerFactory loggerFactory)
         {
             _commandDispatcher = commandDispatcher;
             _doorRepository = doorRepository;
             _userRepository = userRepository;
-            _logger = logger;
+            _logger = loggerFactory.CreateLogger<OpenDoorCommandHandler>();
         }
 
         public async Task ExecuteAsync(OpenDoorCommand command)

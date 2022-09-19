@@ -5,15 +5,19 @@ VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartLock.API", "Source\SmartLock.API\SmartLock.API.csproj", "{0E0FFBEF-723A-450C-A40F-4C1F30142C5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLock.Model", "Source\SmartLock.Model\SmartLock.Model.csproj", "{790F93A0-6A0C-4567-815B-55DC31C34C1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartLock.Model", "Source\SmartLock.Model\SmartLock.Model.csproj", "{790F93A0-6A0C-4567-815B-55DC31C34C1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLock.Access", "Source\SmartLock.Access\SmartLock.Access.csproj", "{D0B16C78-AB43-4FAA-8184-42C54C2CEC9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartLock.Access", "Source\SmartLock.Access\SmartLock.Access.csproj", "{D0B16C78-AB43-4FAA-8184-42C54C2CEC9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLock.Service", "Source\SmartLock.Service\SmartLock.Service.csproj", "{030F9299-5374-49DC-995D-CA7321DB5220}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartLock.Service", "Source\SmartLock.Service\SmartLock.Service.csproj", "{030F9299-5374-49DC-995D-CA7321DB5220}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLock.CQRS", "Source\SmartLock.CQRS\SmartLock.CQRS.csproj", "{40C321D9-969B-465D-97D4-C47F5CFDCA41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartLock.CQRS", "Source\SmartLock.CQRS\SmartLock.CQRS.csproj", "{40C321D9-969B-465D-97D4-C47F5CFDCA41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLock.Common", "Source\SmartLock.Common\SmartLock.Common.csproj", "{EC29402D-A60A-4109-9E68-CEF747DAEA3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartLock.Common", "Source\SmartLock.Common\SmartLock.Common.csproj", "{EC29402D-A60A-4109-9E68-CEF747DAEA3D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartLock.API.Unit.Test", "Test\SmartLock.API.Unit.Test\SmartLock.API.Unit.Test.csproj", "{02FE82A5-5C6D-4B3B-9E17-38828289125F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLock.CQRS.Unit.Test", "Test\SmartLock.CQRS.Unit.Test\SmartLock.CQRS.Unit.Test.csproj", "{1C02D1DF-32F7-47ED-A3E0-32A53CC53748}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{EC29402D-A60A-4109-9E68-CEF747DAEA3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC29402D-A60A-4109-9E68-CEF747DAEA3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC29402D-A60A-4109-9E68-CEF747DAEA3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02FE82A5-5C6D-4B3B-9E17-38828289125F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02FE82A5-5C6D-4B3B-9E17-38828289125F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02FE82A5-5C6D-4B3B-9E17-38828289125F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02FE82A5-5C6D-4B3B-9E17-38828289125F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C02D1DF-32F7-47ED-A3E0-32A53CC53748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C02D1DF-32F7-47ED-A3E0-32A53CC53748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C02D1DF-32F7-47ED-A3E0-32A53CC53748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C02D1DF-32F7-47ED-A3E0-32A53CC53748}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

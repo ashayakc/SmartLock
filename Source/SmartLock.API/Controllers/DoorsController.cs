@@ -12,11 +12,11 @@ namespace SmartLock.Controllers
         private readonly IDoorService _doorService;
         private readonly IClaimsHandler _claimsHandler;
         private readonly ILogger<DoorsController> _logger;
-        public DoorsController(IDoorService doorService, IClaimsHandler claimsHandler, ILogger<DoorsController> logger)
+        public DoorsController(IDoorService doorService, IClaimsHandler claimsHandler, ILoggerFactory logger)
         {
             _doorService = doorService;
             _claimsHandler = claimsHandler;
-            _logger = logger;
+            _logger = logger.CreateLogger<DoorsController>();
         }
 
         [HttpPost, Route("{doorId}/open")]

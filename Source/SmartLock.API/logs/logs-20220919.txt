@@ -1,0 +1,31 @@
+2022-09-19T08:38:39.6647181+05:30  [INF] Now listening on: "http://localhost:5012" (d826f4b8)
+2022-09-19T08:38:39.6803799+05:30  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-09-19T08:38:39.6818173+05:30  [INF] Hosting environment: "Development" (c3307c92)
+2022-09-19T08:38:39.6829653+05:30  [INF] Content root path: "D:\Learning\Clay\SmartLock\Source\SmartLock.API\" (b5d60022)
+2022-09-19T08:38:52.0381459+05:30 0HMKPTH08PG1E:00000002 [INF] Trying to open door for 1 (6db6f812)
+2022-09-19T08:38:53.7403072+05:30 0HMKPTH08PG1E:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-19T08:38:56.8513694+05:30 0HMKPTH08PG1E:00000002 [INF] Executed DbCommand ("79"ms) [Parameters=["@__id_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Name], [t].[OfficeId], [t].[Type], [d0].[Id], [d0].[DoorId], [d0].[RoleId]
+FROM (
+    SELECT TOP(2) [d].[Id], [d].[Name], [d].[OfficeId], [d].[Type]
+    FROM [Doors] AS [d]
+    WHERE [d].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [DoorRoleMappings] AS [d0] ON [t].[Id] = [d0].[DoorId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-19T08:38:56.9751471+05:30 0HMKPTH08PG1E:00000002 [INF] Executed DbCommand ("4"ms) [Parameters=["@__id_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-19T08:38:57.1847067+05:30 0HMKPTH08PG1E:00000002 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int64), @p4='?' (Size = 1) (DbType = Byte), @p5='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Comments], [DoorId], [EventTime], [OfficeId], [Status], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [AuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)

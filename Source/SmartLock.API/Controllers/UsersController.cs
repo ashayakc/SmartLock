@@ -18,7 +18,7 @@ namespace SmartLock.Controllers
 
         [HttpPost, Route("login")]
         [AllowAnonymous]
-        public async Task<IActionResult> CreateAsync([FromBody] UserCredentialDto userCredential)
+        public async Task<IActionResult> AuthenticateAsync([FromBody] UserCredentialDto userCredential)
         {
             return Ok(await _userDataLogic.AuthenticateAsync(userCredential));
         }
