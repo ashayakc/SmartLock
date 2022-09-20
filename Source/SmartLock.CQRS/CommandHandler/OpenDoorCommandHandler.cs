@@ -58,7 +58,7 @@ namespace SmartLock.CQRS.CommandHandler
         {
             _logger.LogWarning($"Attempt for an unauthorized entry by user {userId} on door {doorId}");
             await _commandDispatcher.DispatchAsync(new DoorOpenedFailedEvent { DoorId = doorId, UserId = userId, OfficeId = officeId, Comments = comments });
-            throw new SmartLockApiException("You are not authorized to access this door. Please contact the administrator");
+            throw new UnauthorizedAccessException("You are not authorized to access this door. Please contact the administrator");
         }
     }
 }

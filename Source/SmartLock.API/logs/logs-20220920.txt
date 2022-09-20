@@ -26,3 +26,348 @@ WHERE [u].[UserId] = @__userId_0" (0723d8ff)
 FROM [DoorRoleMappings] AS [d]
 INNER JOIN [Doors] AS [d0] ON [d].[DoorId] = [d0].[Id]
 WHERE [d].[RoleId] = CAST(2 AS bigint)" (0723d8ff)
+2022-09-20T16:09:39.6957792+05:30  [INF] Now listening on: "http://localhost:5012" (d826f4b8)
+2022-09-20T16:09:39.7119029+05:30  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-09-20T16:09:39.7133223+05:30  [INF] Hosting environment: "Development" (c3307c92)
+2022-09-20T16:09:39.7145530+05:30  [INF] Content root path: "D:\Learning\Clay\SmartLock\Source\SmartLock.API\" (b5d60022)
+2022-09-20T16:09:56.2790109+05:30 0HMKQUHM0NUF8:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:09:56.6355606+05:30 0HMKQUHM0NUF9:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "IDX14100: JWT is not well formed: 'System.String'.
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'." (48071232)
+2022-09-20T16:09:56.6746214+05:30 0HMKQUHM0NUF9:00000002 [INF] AuthenticationScheme: "JwtAuth" was challenged. (d45f1f38)
+2022-09-20T16:10:09.1908352+05:30 0HMKQUHM0NUFA:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:10:25.6487554+05:30 0HMKQUHM0NUFB:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "IDX14100: JWT is not well formed: 'System.String'.
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'." (48071232)
+2022-09-20T16:10:25.6510169+05:30 0HMKQUHM0NUFB:00000002 [INF] AuthenticationScheme: "JwtAuth" was challenged. (d45f1f38)
+2022-09-20T16:10:59.3700252+05:30 0HMKQUHM0NUFC:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:11:35.7059935+05:30 0HMKQUHM0NUFD:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:11:37.0111571+05:30 0HMKQUHM0NUFD:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:11:38.6184292+05:30 0HMKQUHM0NUFD:00000002 [INF] Executed DbCommand ("76"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:14:57.0874739+05:30 0HMKQUHM0NUFF:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:14:57.1235702+05:30 0HMKQUHM0NUFF:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:14:57.1527730+05:30 0HMKQUHM0NUFF:00000002 [INF] Executed DbCommand ("5"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:15:22.4280960+05:30 0HMKQUHM0NUFH:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:15:22.4382220+05:30 0HMKQUHM0NUFH:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:15:22.4589938+05:30 0HMKQUHM0NUFH:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:15:48.6041788+05:30 0HMKQUHM0NUFI:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:15:48.6061852+05:30 0HMKQUHM0NUFI:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:15:48.6261968+05:30 0HMKQUHM0NUFI:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:16:07.0732286+05:30 0HMKQUHM0NUFK:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:16:07.0753814+05:30 0HMKQUHM0NUFK:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:16:07.0936599+05:30 0HMKQUHM0NUFK:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:16:07.1198061+05:30 0HMKQUHM0NUFL:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:16:07.1212053+05:30 0HMKQUHM0NUFL:00000002 [INF] AuthenticationScheme: "JwtAuth" was challenged. (d45f1f38)
+2022-09-20T16:17:38.2150699+05:30 0HMKQUHM0NUFM:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:17:38.2179832+05:30 0HMKQUHM0NUFM:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:17:38.2428503+05:30 0HMKQUHM0NUFM:00000002 [INF] Executed DbCommand ("4"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:24:26.8406786+05:30 0HMKQUHM0NUFO:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:24:26.8435917+05:30 0HMKQUHM0NUFO:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:24:26.8889916+05:30 0HMKQUHM0NUFO:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:25:15.0007517+05:30 0HMKQUHM0NUFQ:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:25:15.0023815+05:30 0HMKQUHM0NUFQ:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:25:15.0245894+05:30 0HMKQUHM0NUFQ:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:27:55.7119330+05:30 0HMKQUHM0NUFS:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:27:55.7151727+05:30 0HMKQUHM0NUFS:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:27:55.7553044+05:30 0HMKQUHM0NUFS:00000002 [INF] Executed DbCommand ("4"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:43:08.3380383+05:30 0HMKQUHM0NUFU:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:43:08.3446032+05:30 0HMKQUHM0NUFU:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:43:08.4016933+05:30 0HMKQUHM0NUFU:00000002 [INF] Executed DbCommand ("16"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:43:26.3264763+05:30 0HMKQUHM0NUFV:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "IDX14102: Unable to decode the header 'System.String' as Base64Url encoded string. jwtEncodedString: 'System.String'." (48071232)
+2022-09-20T16:43:26.3278524+05:30 0HMKQUHM0NUFV:00000002 [INF] AuthenticationScheme: "JwtAuth" was challenged. (d45f1f38)
+2022-09-20T16:45:35.9941055+05:30 0HMKQUHM0NUG0:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:45:35.9960078+05:30 0HMKQUHM0NUG0:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:45:36.0213003+05:30 0HMKQUHM0NUG0:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:46:57.3799682+05:30 0HMKQUHM0NUG2:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:46:57.3836738+05:30 0HMKQUHM0NUG2:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:46:57.4169116+05:30 0HMKQUHM0NUG2:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:47:06.7354014+05:30 0HMKQUHM0NUG4:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:47:06.7378912+05:30 0HMKQUHM0NUG4:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:47:06.7638564+05:30 0HMKQUHM0NUG4:00000002 [INF] Executed DbCommand ("4"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:48:39.3117226+05:30  [INF] Now listening on: "http://localhost:5012" (d826f4b8)
+2022-09-20T16:48:39.3317568+05:30  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-09-20T16:48:39.3389242+05:30  [INF] Hosting environment: "Development" (c3307c92)
+2022-09-20T16:48:39.3454136+05:30  [INF] Content root path: "D:\Learning\Clay\SmartLock\Source\SmartLock.API\" (b5d60022)
+2022-09-20T16:49:22.8759247+05:30 0HMKQV7F6FHOQ:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:49:24.1238032+05:30 0HMKQV7F6FHOQ:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:49:25.4844923+05:30 0HMKQV7F6FHOQ:00000002 [INF] Executed DbCommand ("73"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:52:15.5412388+05:30 0HMKQV7F6FHOS:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:52:15.5866012+05:30 0HMKQV7F6FHOS:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:52:15.6124616+05:30 0HMKQV7F6FHOS:00000002 [INF] Executed DbCommand ("5"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:54:01.8166592+05:30 0HMKQV7F6FHOU:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:54:01.8277957+05:30 0HMKQV7F6FHOU:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:54:01.8543789+05:30 0HMKQV7F6FHOU:00000002 [INF] Executed DbCommand ("4"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:54:05.8709446+05:30 0HMKQV7F6FHOV:00000002 [INF] Trying to open door for 1 (6db6f812)
+2022-09-20T16:54:05.8789367+05:30 0HMKQV7F6FHOV:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:54:05.9014663+05:30 0HMKQV7F6FHOV:00000002 [INF] Executed DbCommand ("6"ms) [Parameters=["@__id_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Name], [t].[OfficeId], [t].[Type], [d0].[Id], [d0].[DoorId], [d0].[RoleId]
+FROM (
+    SELECT TOP(2) [d].[Id], [d].[Name], [d].[OfficeId], [d].[Type]
+    FROM [Doors] AS [d]
+    WHERE [d].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [DoorRoleMappings] AS [d0] ON [t].[Id] = [d0].[DoorId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:54:05.9413389+05:30 0HMKQV7F6FHOV:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@__id_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:54:05.9495726+05:30 0HMKQV7F6FHOV:00000002 [WRN] Attempt for an unauthorized entry by user 5 on door 1 (1a2bb01e)
+2022-09-20T16:54:06.1459493+05:30 0HMKQV7F6FHOV:00000002 [INF] Executed DbCommand ("20"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int64), @p4='?' (Size = 1) (DbType = Byte), @p5='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Comments], [DoorId], [EventTime], [OfficeId], [Status], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [AuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-09-20T16:54:29.3870510+05:30 0HMKQV7F6FHP0:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:54:29.3891382+05:30 0HMKQV7F6FHP0:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:54:29.4077436+05:30 0HMKQV7F6FHP0:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:54:29.4400224+05:30 0HMKQV7F6FHP1:00000002 [INF] Trying to open door for 1 (6db6f812)
+2022-09-20T16:54:29.4422307+05:30 0HMKQV7F6FHP1:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:54:29.4462608+05:30 0HMKQV7F6FHP1:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__id_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Name], [t].[OfficeId], [t].[Type], [d0].[Id], [d0].[DoorId], [d0].[RoleId]
+FROM (
+    SELECT TOP(2) [d].[Id], [d].[Name], [d].[OfficeId], [d].[Type]
+    FROM [Doors] AS [d]
+    WHERE [d].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [DoorRoleMappings] AS [d0] ON [t].[Id] = [d0].[DoorId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:54:29.4505552+05:30 0HMKQV7F6FHP1:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__id_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:54:29.4525322+05:30 0HMKQV7F6FHP1:00000002 [WRN] Attempt for an unauthorized entry by user 5 on door 1 (1a2bb01e)
+2022-09-20T16:54:29.4568036+05:30 0HMKQV7F6FHP1:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int64), @p4='?' (Size = 1) (DbType = Byte), @p5='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Comments], [DoorId], [EventTime], [OfficeId], [Status], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [AuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-09-20T16:56:17.3202006+05:30  [INF] Now listening on: "http://localhost:5012" (d826f4b8)
+2022-09-20T16:56:17.3371371+05:30  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-09-20T16:56:17.3386151+05:30  [INF] Hosting environment: "Development" (c3307c92)
+2022-09-20T16:56:17.3401571+05:30  [INF] Content root path: "D:\Learning\Clay\SmartLock\Source\SmartLock.API\" (b5d60022)
+2022-09-20T16:56:22.1988818+05:30 0HMKQVBNL5FD0:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:56:23.2488364+05:30 0HMKQVBNL5FD0:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:56:24.3727316+05:30 0HMKQVBNL5FD0:00000002 [INF] Executed DbCommand ("77"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:56:24.8499461+05:30 0HMKQVBNL5FD1:00000002 [INF] Trying to open door for 1 (6db6f812)
+2022-09-20T16:56:24.8892142+05:30 0HMKQVBNL5FD1:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:56:24.9264949+05:30 0HMKQVBNL5FD1:00000002 [INF] Executed DbCommand ("8"ms) [Parameters=["@__id_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Name], [t].[OfficeId], [t].[Type], [d0].[Id], [d0].[DoorId], [d0].[RoleId]
+FROM (
+    SELECT TOP(2) [d].[Id], [d].[Name], [d].[OfficeId], [d].[Type]
+    FROM [Doors] AS [d]
+    WHERE [d].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [DoorRoleMappings] AS [d0] ON [t].[Id] = [d0].[DoorId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:56:24.9614969+05:30 0HMKQVBNL5FD1:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__id_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:56:24.9736987+05:30 0HMKQVBNL5FD1:00000002 [WRN] Attempt for an unauthorized entry by user 5 on door 1 (1a2bb01e)
+2022-09-20T16:56:25.1704957+05:30 0HMKQVBNL5FD1:00000002 [INF] Executed DbCommand ("4"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int64), @p4='?' (Size = 1) (DbType = Byte), @p5='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Comments], [DoorId], [EventTime], [OfficeId], [Status], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [AuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2022-09-20T16:56:29.9811059+05:30 0HMKQVBNL5FD2:00000002 [INF] "JwtAuth" was not authenticated. Failure message: "Unauthorized" (48071232)
+2022-09-20T16:56:29.9911009+05:30 0HMKQVBNL5FD2:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:56:30.0135641+05:30 0HMKQVBNL5FD2:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userName_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[UserName] = @__userName_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:56:30.0484727+05:30 0HMKQVBNL5FD3:00000002 [INF] Trying to open door for 1 (6db6f812)
+2022-09-20T16:56:30.0508360+05:30 0HMKQVBNL5FD3:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T16:56:30.0536987+05:30 0HMKQVBNL5FD3:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Name], [t].[OfficeId], [t].[Type], [d0].[Id], [d0].[DoorId], [d0].[RoleId]
+FROM (
+    SELECT TOP(2) [d].[Id], [d].[Name], [d].[OfficeId], [d].[Type]
+    FROM [Doors] AS [d]
+    WHERE [d].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [DoorRoleMappings] AS [d0] ON [t].[Id] = [d0].[DoorId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:56:30.0575220+05:30 0HMKQVBNL5FD3:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[EmailId], [t].[EmployeeId], [t].[Firstname], [t].[IsAdmin], [t].[LastName], [t].[Password], [t].[UserName], [u0].[Id], [u0].[OfficeId], [u0].[RoleId], [u0].[UserId]
+FROM (
+    SELECT TOP(2) [u].[Id], [u].[EmailId], [u].[EmployeeId], [u].[Firstname], [u].[IsAdmin], [u].[LastName], [u].[Password], [u].[UserName]
+    FROM [Users] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [UserOfficeRoleMapping] AS [u0] ON [t].[Id] = [u0].[UserId]
+ORDER BY [t].[Id]" (0723d8ff)
+2022-09-20T16:56:30.0676961+05:30 0HMKQVBNL5FD3:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int64), @p4='?' (Size = 1) (DbType = Byte), @p5='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Comments], [DoorId], [EventTime], [OfficeId], [Status], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [AuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
