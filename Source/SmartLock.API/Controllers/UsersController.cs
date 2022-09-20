@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SmartLock.DataLogic.Users;
 using SmartLock.Model.Dto;
+using Swashbuckle.Swagger.Annotations;
 
 namespace SmartLock.Controllers
 {
@@ -18,6 +19,7 @@ namespace SmartLock.Controllers
 
         [HttpPost, Route("login")]
         [AllowAnonymous]
+        [SwaggerOperation(OperationId = "login")]
         public async Task<IActionResult> AuthenticateAsync([FromBody] UserCredentialDto userCredential)
         {
             return Ok(await _userDataLogic.AuthenticateAsync(userCredential));

@@ -46,7 +46,11 @@ namespace SmartLock.API
 
             services.AddJwtAuthentication();
             services.AddEndpointsApiExplorer();
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(c =>
+            {
+                c.EnableAnnotations();
+                c.OperationFilter<ApiOperationFilter>();
+            });
             services.AddHealthChecks()
                .AddCheck("ping",
                             () => HealthCheckResult.Healthy(),
