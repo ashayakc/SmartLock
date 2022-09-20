@@ -11,6 +11,7 @@ namespace SmartLock.CQRS
         {
             services.AddScoped<IQueryDispatcher, QueryDispatcher>();
             services.AddScoped<IQueryHandler<AuditLogByUesrIdQuery, AuditLogByUserIdQueryResult>, AuditLogByUserIdQueryHandler>();
+            services.AddScoped<IQueryHandler<DoorsByUserIdQuery, DoorsByUserIdQueryResult>, DoorsByUserIdQueryHandler>();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace SmartLock.Model.Mappings
         {
             CreateMap<AuditLogDto, AuditLog>()
                 .ReverseMap();
-                
+            CreateMap<Door, DoorDto>();
         }
     }
 }

@@ -1,0 +1,28 @@
+2022-09-20T11:02:00.5220956+05:30  [INF] Now listening on: "http://localhost:5012" (d826f4b8)
+2022-09-20T11:02:00.5396013+05:30  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-09-20T11:02:00.5410096+05:30  [INF] Hosting environment: "Development" (c3307c92)
+2022-09-20T11:02:00.5423022+05:30  [INF] Content root path: "D:\Learning\Clay\SmartLock\Source\SmartLock.API\" (b5d60022)
+2022-09-20T11:03:07.3799055+05:30  [INF] Now listening on: "http://localhost:5012" (d826f4b8)
+2022-09-20T11:03:07.3963487+05:30  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-09-20T11:03:07.3977470+05:30  [INF] Hosting environment: "Development" (c3307c92)
+2022-09-20T11:03:07.3988848+05:30  [INF] Content root path: "D:\Learning\Clay\SmartLock\Source\SmartLock.API\" (b5d60022)
+2022-09-20T11:03:11.5665802+05:30 0HMKQP6CIJ7QA:00000002 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T11:03:13.3481427+05:30 0HMKQP6CIJ7QA:00000002 [INF] Executed DbCommand ("111"ms) [Parameters=["@__userId_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[RoleId]
+FROM [UserOfficeRoleMapping] AS [u]
+WHERE [u].[UserId] = @__userId_0" (0723d8ff)
+2022-09-20T11:03:13.5510434+05:30 0HMKQP6CIJ7QA:00000002 [INF] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d0].[Id], [d0].[Name], [d0].[OfficeId], [d0].[Type]
+FROM [DoorRoleMappings] AS [d]
+INNER JOIN [Doors] AS [d0] ON [d].[DoorId] = [d0].[Id]
+WHERE [d].[RoleId] = CAST(2 AS bigint)" (0723d8ff)
+2022-09-20T11:03:16.2955282+05:30 0HMKQP6CIJ7QA:00000003 [INF] Entity Framework Core "6.0.9" initialized '"SmartLockDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.9"' with options: "None" (d2805559)
+2022-09-20T11:03:16.3030029+05:30 0HMKQP6CIJ7QA:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[RoleId]
+FROM [UserOfficeRoleMapping] AS [u]
+WHERE [u].[UserId] = @__userId_0" (0723d8ff)
+2022-09-20T11:03:16.3061162+05:30 0HMKQP6CIJ7QA:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d0].[Id], [d0].[Name], [d0].[OfficeId], [d0].[Type]
+FROM [DoorRoleMappings] AS [d]
+INNER JOIN [Doors] AS [d0] ON [d].[DoorId] = [d0].[Id]
+WHERE [d].[RoleId] = CAST(2 AS bigint)" (0723d8ff)

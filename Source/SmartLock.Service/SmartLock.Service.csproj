@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SmartLock.Access\SmartLock.Access.csproj" />
     <ProjectReference Include="..\SmartLock.Common\SmartLock.Common.csproj" />
     <ProjectReference Include="..\SmartLock.CQRS\SmartLock.CQRS.csproj" />
     <ProjectReference Include="..\SmartLock.Model\SmartLock.Model.csproj" />

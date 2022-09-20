@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using SmartLock.API.Authorization;
+using SmartLock.Model.Dto;
 using SmartLock.Service.Doors;
 
 namespace SmartLock.Controllers
@@ -17,6 +18,12 @@ namespace SmartLock.Controllers
             _doorService = doorService;
             _claimsHandler = claimsHandler;
             _logger = logger.CreateLogger<DoorsController>();
+        }
+
+        [HttpGet]
+        public async Task<IEnumerable<DoorDto>> GetAsync()
+        {
+            return await _doorService.GetByUserIdAsync(_claimsHandler.GetUserId(User.Claims));
         }
 
         [HttpPost, Route("{doorId}/open")]

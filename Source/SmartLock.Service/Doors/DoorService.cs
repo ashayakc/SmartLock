@@ -1,17 +1,35 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using AutoMapper;
+using Microsoft.Extensions.Logging;
 using SmartLock.CQRS;
 using SmartLock.CQRS.Command;
+using SmartLock.CQRS.Query;
+using SmartLock.CQRS.QueryResult;
+using SmartLock.Model.Dto;
 
 namespace SmartLock.Service.Doors
 {
     public class DoorService : IDoorService
     {
         private readonly ICommandDispatcher _commandDispatcher;
+        private readonly IQueryDispatcher _queryDispatcher;
         private readonly ILogger<DoorService> _logger;
-        public DoorService(ICommandDispatcher commandDispatcher, ILogger<DoorService> logger)
+        private readonly IMapper _mapper;
+        public DoorService(ICommandDispatcher commandDispatcher, ILogger<DoorService> logger, IQueryDispatcher queryDispatcher, IMapper mapper)
         {
             _commandDispatcher = commandDispatcher;
             _logger = logger;
+            _queryDispatcher = queryDispatcher;
+            _mapper = mapper;
+        }
+
+        public async Task<IEnumerable<DoorDto>> GetByUserIdAsync(long userId)
+        {
+            var doorsQueryResult = await _queryDispatcher.DispatchAsync<DoorsByUserIdQuery, DoorsByUserIdQueryResult>(new DoorsByUserIdQuery
+            {
+                UserId = userId
+            });
+
+            return _mapper.Map<List<DoorDto>>(doorsQueryResult.Doors);
         }
 
         public async Task OpenDoorAsync(long doorId, long userId, long[] roleIds, string comments)
