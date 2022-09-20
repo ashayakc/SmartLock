@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartLock.CQRS.Unit.Test", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartLock.Service.Unit.Test", "Test\SmartLock.Service.Unit.Test\SmartLock.Service.Unit.Test.csproj", "{00DBE13F-F585-430A-8B48-FB2D5C94C065}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLock.Workflow.Test", "SmartLock.Workflow.Test\SmartLock.Workflow.Test.csproj", "{6A6B2FA9-22FA-4A25-A54A-77451DB99199}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLock.Workflow.Test", "Test\SmartLock.Workflow.Test\SmartLock.Workflow.Test.csproj", "{6A6B2FA9-22FA-4A25-A54A-77451DB99199}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
