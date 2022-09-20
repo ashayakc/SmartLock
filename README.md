@@ -37,7 +37,8 @@ Few key acitivites which takes place within servie:
 ![image](https://user-images.githubusercontent.com/21059833/190972293-9c625672-695f-4acd-8280-67f96d779781.png)
 
 ## Testing:
-Unit tests are written using xUnit
+Unit tests are written using xUnit and can be made part of CI
+How can we test the product before getting into production? Simple! I have integrated the BDD scenarios which can completely replace the manual testing efforts and also can be made part of our CD. With this we can achieve one click deployment to production too.
 
 ## What next?
 Let's look at how this service can be extended to different level:
