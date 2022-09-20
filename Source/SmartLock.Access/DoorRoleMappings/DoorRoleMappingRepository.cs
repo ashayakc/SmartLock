@@ -13,9 +13,9 @@ namespace SmartLock.Access.DoorRoleMappings
             _dbSet = context.Set<DoorRoleMapping>();
         }
 
-        public async Task<IEnumerable<Door>> GetDoorsByRoleIdsAsync(long[] roleIds)
+        public async Task<IEnumerable<Door>> GetDoorsByRoleIdsAsync(long[] roleIds, long[] officeIds)
         {
-            return await _dbSet.Where(x => roleIds.Contains(x.RoleId)).Select(x => x.Door).ToListAsync();
+            return await _dbSet.Where(x => roleIds.Contains(x.RoleId) && officeIds.Contains(x.Door.OfficeId)).Select(x => x.Door).ToListAsync();
         }
     }
 }

@@ -18,13 +18,13 @@ namespace SmartLock.CQRS.QueryHandler
 
         public async Task<DoorsByUserIdQueryResult> RetrieveAsync(DoorsByUserIdQuery query)
         {
-            var roleIds = await _userOfficeRoleMappingRepository.GetRoleIdsByUserIdAsync(query.UserId);
-            if(!roleIds.Any())
+            var officeRoles = await _userOfficeRoleMappingRepository.GetRoleIdsByUserIdAsync(query.UserId);
+            if(!officeRoles.Any())
             {
                 return new DoorsByUserIdQueryResult(new List<Door>());
             }
 
-            var doors = await _doorRoleMappingRepository.GetDoorsByRoleIdsAsync(roleIds.ToArray());
+            var doors = await _doorRoleMappingRepository.GetDoorsByRoleIdsAsync(officeRoles.Select(x => x.RoleId).ToArray(), officeRoles.Select(x => x.OfficeId).ToArray());
             if (!doors.Any())
             {
                 return new DoorsByUserIdQueryResult(new List<Door>());

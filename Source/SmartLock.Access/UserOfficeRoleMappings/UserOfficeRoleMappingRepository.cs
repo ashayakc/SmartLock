@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SmartLock.Model;
+using SmartLock.Model.Dto;
 
 namespace SmartLock.Access.UserOfficeRoleMappings
 {
@@ -13,9 +14,9 @@ namespace SmartLock.Access.UserOfficeRoleMappings
             _dbSet = context.Set<UserOfficeRoleMapping>();
         }
 
-        public async Task<IEnumerable<long>> GetRoleIdsByUserIdAsync(long userId)
+        public async Task<IEnumerable<OfficeRole>> GetRoleIdsByUserIdAsync(long userId)
         {
-            return await _dbSet.Where(x => x.UserId == userId).Select(x => x.RoleId).ToListAsync();
+            return await _dbSet.Where(x => x.UserId == userId).Select(x => new OfficeRole { RoleId = x.RoleId, OfficeId = x.OfficeId }).ToListAsync();
         }
     }
 }
